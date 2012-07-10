@@ -16,6 +16,18 @@ class logio::package {
   package { ['log.io', 'forever']:
     ensure   => installed,
     provider => npm,
-    require  => Class['nodejs'],
+    require  => [Class['nodejs'], User['logio']],
+  }
+
+  group { 'logio':
+    system => true
+  }
+  user { 'logio':
+    system     => true,
+    gid        => 'logio',
+    groups     => 'adm',
+    home       => '/home/logio',
+    managehome => true,
+    require    => Group['logio'],
   }
 }
