@@ -14,7 +14,7 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class logio::server(
-  port          = 8998,
+  $port = 8998,
 ) {
 
   include logio::package

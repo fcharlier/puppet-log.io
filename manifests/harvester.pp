@@ -16,9 +16,9 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class logio::harvester(
-  host          = '127.0.0.1',
-  port          = 8998,
-  instance_name = $fqdn,
+  $host          = '127.0.0.1',
+  $port          = 8998,
+  $instance_name = $fqdn,
 ) {
 
   include logio::package
