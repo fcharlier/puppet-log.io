@@ -20,9 +20,11 @@ class logio::package {
   }
 
   group { 'logio':
+    ensure => present,
     system => true
   }
   user { 'logio':
+    ensure     => present,
     system     => true,
     gid        => 'logio',
     groups     => 'adm',
