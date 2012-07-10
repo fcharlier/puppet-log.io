@@ -11,7 +11,7 @@ exports.config = {
 
   // Watch the following log files, defined by label:path mappings
   log_file_paths: {
-  <%= log_files.collect do |title, path| "#{title}: #{path}" end.join(",\n") %>
+<%= log_files.sort.collect do |title, path| "    #{title}: '#{path}'" end.join(",\n") %>
   },
 
   // Define name of current machine.
