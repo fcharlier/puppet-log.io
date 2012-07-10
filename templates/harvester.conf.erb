@@ -18,7 +18,7 @@ exports.config = {
   // Alternatively, you can set this name in /etc/profile:
   // export LOGIO_HARVESTER_INSTANCE_NAME='my_log_machine'
   // If so, comment out the line below
-  instance_name : '<%= instance_name %>'
+  instance_name : '<%= instance_name.gsub('.', '_') %>'
 
 }
 
