@@ -1,4 +1,4 @@
-# Class: log.io
+# Class: logio
 #
 # This module manages log.io
 #
@@ -11,7 +11,7 @@
 # Sample Usage:
 #
 # [Remember: No empty lines between comments and class definition]
-class log.io {
+class logio {
 
 
 }
