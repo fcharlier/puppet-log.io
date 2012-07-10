@@ -18,7 +18,8 @@
 class logio::harvester(
   $host          = '127.0.0.1',
   $port          = 8998,
-  $instance_name = $fqdn,
+  $instance_name = $::fqdn,
+  $log_files     = { 'logio_harvester' => '/var/log/log.io/harvester.log' },
 ) {
 
   include logio::package
